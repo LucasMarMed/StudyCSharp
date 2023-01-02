@@ -1,0 +1,15 @@
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\bin\Debug\net6.0\P12 - InvestimentoLongoPrazo.exe
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\bin\Debug\net6.0\P12 - InvestimentoLongoPrazo.deps.json
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\bin\Debug\net6.0\P12 - InvestimentoLongoPrazo.runtimeconfig.json
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\bin\Debug\net6.0\P12 - InvestimentoLongoPrazo.dll
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\bin\Debug\net6.0\P12 - InvestimentoLongoPrazo.pdb
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.csproj.AssemblyReference.cache
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.AssemblyInfoInputs.cache
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.AssemblyInfo.cs
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.csproj.CoreCompileInputs.cache
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.dll
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\refint\P12 - InvestimentoLongoPrazo.dll
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.pdb
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\P12 - InvestimentoLongoPrazo.genruntimeconfig.cache
+C:\Study C#\StudyCSharp\P12 - InvestimentoLongoPrazo\obj\Debug\net6.0\ref\P12 - InvestimentoLongoPrazo.dll

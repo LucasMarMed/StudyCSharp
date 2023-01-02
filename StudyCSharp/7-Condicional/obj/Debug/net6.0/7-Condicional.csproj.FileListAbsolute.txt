@@ -1,0 +1,15 @@
+C:\Study C#\StudyCSharp\7-Condicional\bin\Debug\net6.0\7-Condicional.exe
+C:\Study C#\StudyCSharp\7-Condicional\bin\Debug\net6.0\7-Condicional.deps.json
+C:\Study C#\StudyCSharp\7-Condicional\bin\Debug\net6.0\7-Condicional.runtimeconfig.json
+C:\Study C#\StudyCSharp\7-Condicional\bin\Debug\net6.0\7-Condicional.dll
+C:\Study C#\StudyCSharp\7-Condicional\bin\Debug\net6.0\7-Condicional.pdb
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.csproj.AssemblyReference.cache
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.GeneratedMSBuildEditorConfig.editorconfig
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.AssemblyInfoInputs.cache
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.AssemblyInfo.cs
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.csproj.CoreCompileInputs.cache
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.dll
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\refint\7-Condicional.dll
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.pdb
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\7-Condicional.genruntimeconfig.cache
+C:\Study C#\StudyCSharp\7-Condicional\obj\Debug\net6.0\ref\7-Condicional.dll

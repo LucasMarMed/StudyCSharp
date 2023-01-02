@@ -1,0 +1,15 @@
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.csproj.AssemblyReference.cache
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.AssemblyInfoInputs.cache
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.AssemblyInfo.cs
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.csproj.CoreCompileInputs.cache
+C:\Study C#\StudyCSharp\Conversoes\bin\Debug\net6.0\4-Conversoes.exe
+C:\Study C#\StudyCSharp\Conversoes\bin\Debug\net6.0\4-Conversoes.deps.json
+C:\Study C#\StudyCSharp\Conversoes\bin\Debug\net6.0\4-Conversoes.runtimeconfig.json
+C:\Study C#\StudyCSharp\Conversoes\bin\Debug\net6.0\4-Conversoes.dll
+C:\Study C#\StudyCSharp\Conversoes\bin\Debug\net6.0\4-Conversoes.pdb
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.dll
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\refint\4-Conversoes.dll
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.pdb
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\4-Conversoes.genruntimeconfig.cache
+C:\Study C#\StudyCSharp\Conversoes\obj\Debug\net6.0\ref\4-Conversoes.dll

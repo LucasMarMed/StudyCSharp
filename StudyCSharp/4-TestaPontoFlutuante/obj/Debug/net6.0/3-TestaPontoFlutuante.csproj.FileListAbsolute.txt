@@ -1,0 +1,15 @@
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\bin\Debug\net6.0\3-TestaPontoFlutuante.exe
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\bin\Debug\net6.0\3-TestaPontoFlutuante.deps.json
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\bin\Debug\net6.0\3-TestaPontoFlutuante.runtimeconfig.json
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\bin\Debug\net6.0\3-TestaPontoFlutuante.dll
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\bin\Debug\net6.0\3-TestaPontoFlutuante.pdb
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.csproj.AssemblyReference.cache
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.GeneratedMSBuildEditorConfig.editorconfig
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.AssemblyInfoInputs.cache
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.AssemblyInfo.cs
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.csproj.CoreCompileInputs.cache
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.dll
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\refint\3-TestaPontoFlutuante.dll
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.pdb
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\3-TestaPontoFlutuante.genruntimeconfig.cache
+C:\Study C#\StudyCSharp\4-TestaPontoFlutuante\obj\Debug\net6.0\ref\3-TestaPontoFlutuante.dll
