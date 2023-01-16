@@ -1,7 +1,11 @@
-﻿Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+﻿using bytebank.Modelos.Conta;
+using bytebank_ATENDIMENTO.bytebank.Util;
 
-TestaArrayInt();
-TestaBuscarPalavra();
+Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+
+#region Exemplos Array
+//TestaArrayInt();
+//TestaBuscarPalavra();
 
 void TestaArrayInt()
 {
@@ -52,7 +56,57 @@ void TestaBuscarPalavra()
     }
 }
 
+// código anterior omitido
+
+//void TestaArrayDeContasCorrentes()
+//{
+//    ContaCorrente[] listaDeContas = new ContaCorrente[]
+//    {
+//        new ContaCorrente(874, "5679787-A"),
+//        new ContaCorrente(874, "4456668-B"),
+//        new ContaCorrente(874, "7781438-C")
+//    };
+
+//    for (int i = 0; i < listaDeContas.Length; i++)
+//    {
+//        ContaCorrente contaAtual = listaDeContas[i];
+//        Console.WriteLine($"Índice {i} - Conta:{contaAtual.Conta}");
+//    }
+//}
+void TestaArrayDeContasCorrentes()
+{
+    var contadoIgor = new ContaCorrente(956, "1111111");
+    contadoIgor.Depositar(200);
+    var contadoIago = new ContaCorrente(956, "8888888");
+    contadoIago.Depositar(300);
+
+    
+
+    ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
+    listaDeContas.Adicionar(contadoIgor);
+    listaDeContas.Adicionar(new ContaCorrente(874, "5679787-A"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "4456668-B"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(contadoIago);
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-2"));
+
+
+    
+    ContaCorrente conta = listaDeContas.MaiorSaldo();
+    Console.WriteLine($"Conta com maior saldo: {conta.Conta}");
+
+    listaDeContas.Remover( contadoIago );
+    listaDeContas.ExibeLista();
+    
+
+}
+
+// TestaArrayDeContasCorrentes();
+#endregion
+
+
 
 
 //new ByteBankAtendimento().AtendimentoCliente();
-
