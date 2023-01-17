@@ -11,11 +11,13 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
     {
         private ContaCorrente[] _itens = null;
         private int _proximaPosicao=0;
-        public ListaDeContasCorrentes(int tamanhoInicial=5)
+
+        public ListaDeContasCorrentes(int tamanhoInicial=5) // Contrutor
         {
             _itens = new ContaCorrente[tamanhoInicial];
         }
 
+        #region Adicionar Nova Conta
         public void Adicionar(ContaCorrente item)
         {
             Console.WriteLine($"Adicionando item na posição {_proximaPosicao}");
@@ -39,6 +41,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             }
             _itens = novoArray;
         }
+#endregion
 
         public void Remover( ContaCorrente conta)
         {
@@ -76,23 +79,17 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
             }
         }
 
+        #region Indexador
         public ContaCorrente RecuperarContaNoIndice(int indice)
         {
-            if (indice<0 || indice >=_proximaPosicao)
+            if ( indice<0 || indice >=_proximaPosicao )
             {
                 throw new ArgumentOutOfRangeException(nameof(indice));
             }
 
             return _itens[indice];
         }
-
-        public int Tamanho {
-            get
-            {
-                return _proximaPosicao;
-            }        
-        }
-
+                
         public ContaCorrente this[int indice]
         {
             get
@@ -100,7 +97,35 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
                 return RecuperarContaNoIndice(indice);
             }
         }
-     
+        #endregion
 
+        public int Tamanho
+        {
+            get
+            {
+                return _proximaPosicao;
+            }
+        }
+
+        public ContaCorrente MaiorSaldo()
+        {
+
+            ContaCorrente conta = null;
+            var maiorValor = 0;
+            for (var i = 0; i < _itens.Length; i++)
+            {
+                if (_itens[i] != null)
+                {
+                    if (!(maiorValor > _itens[i].Saldo))
+                    {
+                        Console.WriteLine(maiorValor);
+                        maiorValor = (int)_itens[i].Saldo;
+                        conta = _itens[i];
+                    }
+                    
+                }
+            }
+            return conta;
+        }
     }
 }

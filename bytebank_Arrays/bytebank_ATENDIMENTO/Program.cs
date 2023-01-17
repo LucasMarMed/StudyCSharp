@@ -1,7 +1,13 @@
-﻿Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+﻿using bytebank.Modelos.Conta;
+using bytebank_ATENDIMENTO.bytebank.Util;
+using System.Collections;
 
-TestaArrayInt();
-TestaBuscarPalavra();
+Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+
+#region Exemplos Array
+//TestaArrayInt();
+//TestaBuscarPalavra();
+
 
 void TestaArrayInt()
 {
@@ -52,7 +58,151 @@ void TestaBuscarPalavra()
     }
 }
 
+// código anterior omitido
+
+//void TestaArrayDeContasCorrentes()
+//{
+//    ContaCorrente[] listaDeContas = new ContaCorrente[]
+//    {
+//        new ContaCorrente(874, "5679787-A"),
+//        new ContaCorrente(874, "4456668-B"),
+//        new ContaCorrente(874, "7781438-C")
+//    };
+
+//    for (int i = 0; i < listaDeContas.Length; i++)
+//    {
+//        ContaCorrente contaAtual = listaDeContas[i];
+//        Console.WriteLine($"Índice {i} - Conta:{contaAtual.Conta}");
+//    }
+//}
+void TestaArrayDeContasCorrentes()
+{
+    var contadoIgor = new ContaCorrente(956);
+    contadoIgor.Depositar(200);
+    var contadoIago = new ContaCorrente(956);
+    contadoIago.Depositar(300);
+
+    
+
+    ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
+    listaDeContas.Adicionar(contadoIgor);
+    listaDeContas.Adicionar(new ContaCorrente(874));
+    listaDeContas.Adicionar(new ContaCorrente(874));
+    listaDeContas.Adicionar(new ContaCorrente(874));
+    listaDeContas.Adicionar(contadoIago);
+    listaDeContas.Adicionar(new ContaCorrente(874));
+    listaDeContas.Adicionar(new ContaCorrente(874));
+    listaDeContas.Adicionar(new ContaCorrente(874));
 
 
+    
+    ContaCorrente conta = listaDeContas.MaiorSaldo();
+    Console.WriteLine($"Conta com maior saldo: {conta.Conta}");
+
+    listaDeContas.Remover( contadoIago );
+    listaDeContas.ExibeLista();
+    
+
+}
+
+// TestaArrayDeContasCorrentes();
+#endregion
+
+#region
+
+ArrayList _listaDeContas = new ArrayList();
+AtendimentoCliente();
+
+void AtendimentoCliente()
+{
+    char opcao = '0';
+    while (opcao != '6')
+    {
+        Console.Clear();
+        Console.WriteLine("===============================");
+        Console.WriteLine("===       Atendimento       ===");
+        Console.WriteLine("===1 - Cadastrar Conta      ===");
+        Console.WriteLine("===2 - Listar Contas        ===");
+        Console.WriteLine("===3 - Remover Conta        ===");
+        Console.WriteLine("===4 - Ordenar Contas       ===");
+        Console.WriteLine("===5 - Pesquisar Conta      ===");
+        Console.WriteLine("===6 - Sair do Sistema      ===");
+        Console.WriteLine("===============================");
+        Console.WriteLine("\n\n");
+        Console.Write("Digite a opção desejada: ");
+        opcao = Console.ReadLine()[0];
+        switch (opcao)
+        {
+            case '1': CadastrarConta();
+                break;
+            case '2': ListarContas();
+                break;
+
+            default:
+                Console.WriteLine("Opcao não implementada.");
+                break;
+        }
+    }
+}
+
+void CadastrarConta()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===   CADASTRO DE CONTAS    ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    Console.WriteLine("=== Informe dados da conta ===");
+    
+    Console.Write("Número da Agência: ");
+    int numeroAgencia = int.Parse(Console.ReadLine());
+
+    ContaCorrente conta = new ContaCorrente(numeroAgencia);
+
+    Console.Write("Informe o saldo inicial: ");
+    conta.Saldo = double.Parse(Console.ReadLine());
+
+    Console.Write("Infome nome do Titular: ");
+    conta.Titular.Nome = Console.ReadLine();
+
+    Console.Write("Infome CPF do Titular: ");
+    conta.Titular.Cpf = Console.ReadLine();
+
+    Console.Write("Infome Profissão do Titular: ");
+    conta.Titular.Profissao = Console.ReadLine();
+
+    _listaDeContas.Add(conta);
+    Console.WriteLine("... Conta cadastrada com sucesso! ...");
+    Console.ReadKey();
+}
+
+void ListarContas()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===     LISTA DE CONTAS     ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    if (_listaDeContas.Count <= 0)
+    {
+        Console.WriteLine("... Não há contas cadastradas! ...");
+        Console.ReadKey();
+        return;
+    }
+    foreach (ContaCorrente item in _listaDeContas)
+    {
+        Console.WriteLine($"Titular da conta: {item.Titular.Nome}");
+        Console.WriteLine($"CPF: {item.Titular.Cpf}");
+        Console.WriteLine($"Profissão: {item.Titular.Profissao}");
+
+        Console.WriteLine($"Número da conta: {item.Conta}");
+        Console.WriteLine($"Agência: {item.Numero_agencia}");
+        Console.WriteLine($"Saldo R$ {string.Format("{0:0.00}", item.Saldo)}");
+        Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        Console.ReadKey();
+    }
+
+}
+
+#endregion
 //new ByteBankAtendimento().AtendimentoCliente();
-

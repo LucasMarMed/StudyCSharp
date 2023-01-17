@@ -8,9 +8,9 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
     {
 
         private List<ContaCorrente> _listaDeContas = new List<ContaCorrente>(){
-          new ContaCorrente(95, "123456-X"){Saldo=100,Titular = new Cliente{Cpf="11111",Nome ="Henrique"}},
-          new ContaCorrente(95, "951258-X"){Saldo=200,Titular = new Cliente{Cpf="22222",Nome ="Pedro"}},
-          new ContaCorrente(94, "987321-W"){Saldo=60,Titular = new Cliente{Cpf="33333",Nome ="Marisa"}}
+          new ContaCorrente(95){Saldo=100,Titular = new Cliente{Cpf="11111",Nome ="Henrique"}},
+          new ContaCorrente(95){Saldo=200,Titular = new Cliente{Cpf="22222",Nome ="Pedro"}},
+          new ContaCorrente(94){Saldo=60,Titular = new Cliente{Cpf="33333",Nome ="Marisa"}}
         };
            
 
@@ -94,7 +94,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
                 case 1:
                     {
                         Console.Write("Informe o número da Conta: ");
-                        string _numeroConta = Console.ReadLine();
+                        int _numeroConta = Convert.ToInt32(Console.ReadLine());
                         ContaCorrente consultaConta = ConsultaPorNumeroConta(_numeroConta);
                         Console.WriteLine(consultaConta.ToString());
                         Console.ReadKey();
@@ -155,7 +155,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
             return _listaDeContas.Where(conta => conta.Titular.Cpf == cpf).FirstOrDefault();
         }
 
-        private ContaCorrente ConsultaPorNumeroConta(string? numeroConta)
+        private ContaCorrente ConsultaPorNumeroConta(int? numeroConta)
         {
             return _listaDeContas.Where(conta => conta.Conta == numeroConta).FirstOrDefault();
         }
