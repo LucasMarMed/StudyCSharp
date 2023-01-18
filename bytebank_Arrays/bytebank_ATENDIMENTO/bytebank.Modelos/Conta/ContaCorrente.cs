@@ -36,7 +36,7 @@
             }
             set
             {
-                if (value == null)
+                if (value == 0)
                 {
                     return;
                 }
@@ -119,7 +119,7 @@
             }
             else
             {
-                return this.Numero_agencia.CompareTo(outro.Numero_agencia);
+                return this.Conta.CompareTo(outro.Conta);
             }
         }
 

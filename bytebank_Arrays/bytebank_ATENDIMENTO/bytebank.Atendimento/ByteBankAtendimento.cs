@@ -3,8 +3,8 @@ using bytebank_ATENDIMENTO.bytebank.Exceptions;
 
 namespace bytebank_ATENDIMENTO.bytebank.Atendimento
 {
-    #nullable disable
-    internal  class ByteBankAtendimento
+#nullable disable
+    internal class ByteBankAtendimento
     {
 
         private List<ContaCorrente> _listaDeContas = new List<ContaCorrente>(){
@@ -12,7 +12,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
           new ContaCorrente(95){Saldo=200,Titular = new Cliente{Cpf="22222",Nome ="Pedro"}},
           new ContaCorrente(94){Saldo=60,Titular = new Cliente{Cpf="33333",Nome ="Marisa"}}
         };
-           
+
 
         public void AtendimentoCliente()
         {
@@ -175,7 +175,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
             Console.WriteLine("===============================");
             Console.WriteLine("\n");
             Console.Write("Informe o número da Conta: ");
-            string numeroConta = Console.ReadLine();
+            int numeroConta = Convert.ToInt32(Console.ReadLine());
             ContaCorrente conta = null;
             foreach (var item in _listaDeContas)
             {
