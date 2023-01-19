@@ -1,21 +1,164 @@
 ﻿using bytebank.Modelos.Conta;
 using bytebank_ATENDIMENTO.bytebank.Exceptions;
+using bytebank_ATENDIMENTO.bytebank.Util;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace bytebank_ATENDIMENTO.bytebank.Atendimento
+namespace bytebank_ATENDIMENTO.Exemplos
 {
-#nullable disable
-    internal class ByteBankAtendimento
+    internal class Rascunho
     {
+        #region Exemplos Array
+        //TestaArrayInt();
+        //TestaBuscarPalavra();
 
 
-        private List<ContaCorrente> _listaDeContas = new List<ContaCorrente>()
+        void TestaArrayInt()
         {
-            new ContaCorrente(874){Saldo=1000,Titular = new Cliente{Cpf="11111",Nome ="Eduardo"}},
-            new ContaCorrente(874){Saldo=1200,Titular = new Cliente{Cpf="22222",Nome ="Allan"}},
-            new ContaCorrente(874){Saldo=5100,Titular = new Cliente{Cpf="33333",Nome ="Caio"}}
-        };
+            int[] idades = new int[5];
+            idades[0] = 30;
+            idades[1] = 42;
+            idades[2] = 27;
+            idades[3] = 21;
+            idades[4] = 18;
 
-        public void AtendimentoCliente()
+            Console.WriteLine($"Tamanho do Array {idades.Length}");
+
+            int acumulador = 0;
+            for (int i = 0; i < idades.Length; i++)
+            {
+                int idade = idades[i];
+                Console.WriteLine($"índice [{i}] = {idade}");
+                acumulador += idade;
+            }
+            int media = acumulador / idades.Length;
+            Console.WriteLine($"Média de idades = {media}");
+        }
+
+        void TestaBuscarPalavra()
+        {
+            string[] arrayDePalavras = new string[5];
+
+            for (int i = 0; i < arrayDePalavras.Length; i++)
+            {
+                Console.Write($"Digite {i + 1}ª Palavra: ");
+                arrayDePalavras[i] = Console.ReadLine();
+            }
+
+            Console.Write("Digite palavra a ser encontrada: ");
+            var busca = Console.ReadLine();
+
+            foreach (string palavra in arrayDePalavras)
+            {
+                if (palavra.Equals(busca))
+                {
+                    Console.WriteLine($"Palavra encontrada = {busca}.");
+                    break;
+                }
+                //else
+                //{
+                //    Console.WriteLine($"Palavra não encontrada.");
+                //}
+            }
+        }
+
+
+        //void TestaArrayDeContasCorrentes()
+        //{
+        //    ContaCorrente[] listaDeContas = new ContaCorrente[]
+        //    {
+        //        new ContaCorrente(874, "5679787-A"),
+        //        new ContaCorrente(874, "4456668-B"),
+        //        new ContaCorrente(874, "7781438-C")
+        //    };
+
+        //    for (int i = 0; i < listaDeContas.Length; i++)
+        //    {
+        //        ContaCorrente contaAtual = listaDeContas[i];
+        //        Console.WriteLine($"Índice {i} - Conta:{contaAtual.Conta}");
+        //    }
+        //}
+        void TestaArrayDeContasCorrentes()
+        {
+            var contadoIgor = new ContaCorrente(956);
+            contadoIgor.Depositar(200);
+            var contadoIago = new ContaCorrente(956);
+            contadoIago.Depositar(300);
+
+
+
+            ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
+            listaDeContas.Adicionar(contadoIgor);
+            listaDeContas.Adicionar(new ContaCorrente(874));
+            listaDeContas.Adicionar(new ContaCorrente(874));
+            listaDeContas.Adicionar(new ContaCorrente(874));
+            listaDeContas.Adicionar(contadoIago);
+            listaDeContas.Adicionar(new ContaCorrente(874));
+            listaDeContas.Adicionar(new ContaCorrente(874));
+            listaDeContas.Adicionar(new ContaCorrente(874));
+
+
+
+            ContaCorrente conta = listaDeContas.MaiorSaldo();
+            Console.WriteLine($"Conta com maior saldo: {conta.Conta}");
+
+            listaDeContas.Remover(contadoIago);
+            listaDeContas.ExibeLista();
+
+
+        }
+
+        // TestaArrayDeContasCorrentes();
+        #endregion
+
+        #region Usos do List: Add, Reverse, Count
+        //List<ContaCorrente> _listaDeContas2 = new List<ContaCorrente>()
+        //{
+        //    new ContaCorrente(874),
+        //    new ContaCorrente(874),
+        //    new ContaCorrente(874)
+        //};
+
+        //List<ContaCorrente> _listaDeContas3 = new List<ContaCorrente>()
+        //{
+        //    new ContaCorrente(951),
+        //    new ContaCorrente(321),
+        //    new ContaCorrente(719)
+        //};
+
+        //_listaDeContas2.AddRange(_listaDeContas3);
+        //_listaDeContas2.Reverse();
+
+        //for (int i = 0; i < _listaDeContas2.Count; i++)
+        //{
+        //    Console.WriteLine($"Indice[{i}] = Conta [{_listaDeContas2[i].Conta}]");
+        //}
+
+        //Console.WriteLine("\n\n");
+
+        //var range = _listaDeContas3.GetRange(0, 2);
+        //for (int i = 0; i < range.Count; i++)
+        //{
+        //    Console.WriteLine($"Indice[{i}] = Conta [{range[i].Conta}]");
+
+        //}
+        #endregion
+
+        #region Atendimento ao Cliente: Arrays, List, Where, switch
+
+        //ArrayList _listaDeContas = new ArrayList();
+        List<ContaCorrente> _listaDeContas = new List<ContaCorrente>()
+{
+    new ContaCorrente(874){Saldo=1000,Titular = new Cliente{Cpf="11111",Nome ="Eduardo"}},
+    new ContaCorrente(874){Saldo=1200,Titular = new Cliente{Cpf="22222",Nome ="Allan"}},
+    new ContaCorrente(874){Saldo=5100,Titular = new Cliente{Cpf="33333",Nome ="Caio"}}
+};
+        //AtendimentoCliente();
+
+        void AtendimentoCliente()
         {
             try
             {
@@ -62,9 +205,6 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
                         case '5':
                             PesquisarConta();
                             break;
-                        case '6':
-                            EncerrarAplicacao();
-                            break;
                         default:
                             Console.WriteLine("Opcao não implementada.");
                             break;
@@ -79,7 +219,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
 
         }
 
-        private void CadastrarConta()
+        void CadastrarConta()
         {
             Console.Clear();
             Console.WriteLine("===============================");
@@ -92,8 +232,6 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
             int numeroAgencia = int.Parse(Console.ReadLine());
 
             ContaCorrente conta = new ContaCorrente(numeroAgencia);
-
-            Console.WriteLine($"Número da conta [NOVA] : {conta.Conta}");
 
             Console.Write("Informe o saldo inicial: ");
             conta.Saldo = double.Parse(Console.ReadLine());
@@ -112,7 +250,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
             Console.ReadKey();
         }
 
-        private void ListarContas()
+        void ListarContas()
         {
             Console.Clear();
             Console.WriteLine("===============================");
@@ -134,13 +272,13 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
                 Console.WriteLine($"Número da conta: {item.Conta}");
                 Console.WriteLine($"Agência: {item.Numero_agencia}");
                 Console.WriteLine($"Saldo R$ {string.Format("{0:0.00}", item.Saldo)}");
-                Console.WriteLine("=========================\n\n");
+                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 Console.ReadKey();
             }
 
         }
 
-        private void RemoverContas()
+        void RemoverContas()
         {
             Console.Clear();
             Console.WriteLine("===============================");
@@ -171,14 +309,14 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
             Console.ReadKey();
         }
 
-        private void OrdenarContas()
+        void OrdenarContas()
         {
             _listaDeContas.Sort();
             Console.WriteLine("... Lista de Contas ordenadas ...");
             Console.ReadKey();
         }
 
-        private void PesquisarConta()
+        void PesquisarConta()
         {
             Console.Clear();
             Console.WriteLine("===============================");
@@ -281,10 +419,12 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
 
         }
 
-        private void EncerrarAplicacao()
-        {
-            Console.WriteLine("... Encerrando a aplicação ...");
-            Console.ReadKey();
-        }
+
+
+
+
+
+
+        #endregion
     }
 }

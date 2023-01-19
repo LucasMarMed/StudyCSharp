@@ -127,16 +127,16 @@
         {
             Numero_agencia = numero_agencia;
             Random random = new() ;
-            Conta = random.Next(10000,99999);
+            Conta = random.Next(10000,99999); 
             Titular = new Cliente();
             TotalDeContasCriadas += 1;
 
         }
 
-        //public ContaCorrente(int numero_agencia)
+        //public ContaCorrente(int numero_agencia) 
         //{
         //    Numero_agencia = numero_agencia;
-        //    Conta = Guid.NewGuid().ToString().Substring(0, 8);
+        //    Conta = Guid.NewGuid().ToString().Substring(0, 8); Cria um numero de conta aleatorio, tipo string, com 8 caracteres
         //    Titular = new Cliente();
         //    TotalDeContasCriadas += 1;
         //}
