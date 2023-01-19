@@ -147,14 +147,14 @@
         public override string ToString()
         {
 
-            return $" === DADOS DA CONTA === \n" +
+            return $"\n === DADOS DA CONTA === \n" +
                    $"Número da Conta : {this.Conta} \n" +
                    $"Número da Agência : {this.Numero_agencia} \n" +
                    $"Saldo da Conta: {this.Saldo} \n" +
                    $"Titular da Conta: {this.Titular.Nome} \n" +
                    $"CPF do Titular  : {this.Titular.Cpf} \n" +
-                   $"Profissão do Titular: {this.Titular.Profissao}\n\n";
-
+                   $"Profissão do Titular: {this.Titular.Profissao}\n\n"+
+                   $"==============================\n";
 
         }
     }

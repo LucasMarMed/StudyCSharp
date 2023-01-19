@@ -211,8 +211,9 @@ void AtendimentoCliente()
         Console.WriteLine($"{ex.Message}");
     }
 
+}
 
-    void CadastrarConta()
+void CadastrarConta()
     {
         Console.Clear();
         Console.WriteLine("===============================");
@@ -243,7 +244,7 @@ void AtendimentoCliente()
         Console.ReadKey();
     }
 
-    void ListarContas()
+void ListarContas()
     {
         Console.Clear();
         Console.WriteLine("===============================");
@@ -271,7 +272,7 @@ void AtendimentoCliente()
 
     }
 
-    void RemoverContas()
+void RemoverContas()
     {
         Console.Clear();
         Console.WriteLine("===============================");
@@ -302,83 +303,117 @@ void AtendimentoCliente()
         Console.ReadKey();
     }
 
-    void OrdenarContas()
+void OrdenarContas()
     {
         _listaDeContas.Sort();
         Console.WriteLine("... Lista de Contas ordenadas ...");
         Console.ReadKey();
     }
 
-    void PesquisarConta()
+void PesquisarConta()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===    PESQUISAR CONTAS     ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    Console.Write("Deseja pesquisar por (1) NÚMERO DA CONTA ou (2) CPF TITULAR ou " +
+        "(3) Nº AGÊNCIA: ");
+    switch (int.Parse(Console.ReadLine()))
     {
-        Console.Clear();
-        Console.WriteLine("===============================");
-        Console.WriteLine("===    PESQUISAR CONTAS     ===");
-        Console.WriteLine("===============================");
-        Console.WriteLine("\n");
-        Console.Write("Deseja pesquisar por (1) NÚMERO DA CONTA ou (2)CPF TITULAR ou " +
-            " (3) Nº AGÊNCIA : ");
-        switch (int.Parse(Console.ReadLine()))
-        {
-            case 1:
-                {
-                    Console.Write("Informe o número da Conta: ");
-                    int _numeroConta = Convert.ToInt32(Console.ReadLine());
-                    ContaCorrente consultaConta = ConsultaPorNumeroConta(_numeroConta);
-                    Console.WriteLine(consultaConta.ToString());
-                    Console.ReadKey();
-                    break;
-                }
-            case 2:
-                {
-                    Console.Write("Informe o CPF do Titular: ");
-                    string _cpf = Console.ReadLine();
-                    ContaCorrente consultaCpf = ConsultaPorCPFTitular(_cpf);
-                    Console.WriteLine(consultaCpf.ToString());
-                    Console.ReadKey();
-                    break;
-                }
-            
-            default:
-                Console.WriteLine("Opção não implementada.");
+        case 1:
+            {
+                Console.Write("Informe o número da Conta: ");
+                int _numeroConta = Convert.ToInt32(Console.ReadLine());
+                ContaCorrente consultaConta = ConsultaPorNumeroConta(_numeroConta);
+                Console.WriteLine(consultaConta.ToString());
+                Console.ReadKey();
                 break;
-        }
-
-        ContaCorrente ConsultaPorCPFTitular(string? cpf)
-        {
-            ContaCorrente conta = null;
-            for (int i = 0; i < _listaDeContas.Count; i++)
-            {
-                if (_listaDeContas[i].Titular.Cpf.Equals(cpf))
-                {
-                    conta = _listaDeContas[i];
-                }
             }
-            return conta;
-        }
-
-        ContaCorrente ConsultaPorNumeroConta(int? numeroConta)
-        {
-            ContaCorrente conta = null;
-            for (int i = 0; i < _listaDeContas.Count; i++)
+        case 2:
             {
-                if (_listaDeContas[i].Conta.Equals(numeroConta))
-                {
-                    conta = _listaDeContas[i];
-                }
+                Console.Write("Informe o CPF do Titular: ");
+                string _cpf = Console.ReadLine();
+                ContaCorrente consultaCpf = ConsultaPorCPFTitular(_cpf);
+                Console.WriteLine(consultaCpf.ToString());
+                Console.ReadKey();
+                break;
             }
 
-            return conta;
+        case 3:
+        {
+            Console.Write("Informe o Nº da Agência: ");
+            int _numeroAgencia = int.Parse(Console.ReadLine());
+            var contasPorAgencia = ConsultaPorAgencia(_numeroAgencia);
+            ExibirListaDeContas(contasPorAgencia);
+            Console.ReadKey();
+            break;
         }
+            default:
+            Console.WriteLine("Opção não implementada.");
+            break;
+    }
 
+    ContaCorrente ConsultaPorCPFTitular(string? cpf)
+    {
+        //ContaCorrente conta = null;
+        //for (int i = 0; i < _listaDeContas.Count; i++)
+        //{
+        //    if (_listaDeContas[i].Titular.Cpf.Equals(cpf))
+        //    {
+        //        conta = _listaDeContas[i];
+        //    }
+        //}
+        //return conta;
+        return _listaDeContas.Where(conta => conta.Titular.Cpf == cpf).FirstOrDefault();
+    }
+
+    ContaCorrente ConsultaPorNumeroConta(int? numeroConta)
+    {
+        //ContaCorrente conta = null;
+        //for (int i = 0; i < _listaDeContas.Count; i++)
+        //{
+        //    if (_listaDeContas[i].Conta.Equals(numeroConta))
+        //    {
+        //        conta = _listaDeContas[i];
+        //    }
+        //}
+        //return conta;
+        return _listaDeContas.Where(conta => conta.Conta == numeroConta).FirstOrDefault();
+    }
+    
+
+}
+
+List<ContaCorrente> ConsultaPorAgencia(int numeroAgencia)
+{
+    var consulta = (
+                         from conta in _listaDeContas
+                         where conta.Numero_agencia == numeroAgencia
+                         select conta).ToList();
+    return consulta;
+}
+
+void ExibirListaDeContas(List<ContaCorrente> contasPorAgencia)
+{
+    if (contasPorAgencia == null)
+    {
+        Console.WriteLine(" ... A consulta não retornou dados ...");
+    }
+    else
+    {
+        foreach (var item in contasPorAgencia)
+        {
+            Console.WriteLine(item.ToString());
+        }
     }
 }
 
 
 
 
-#endregion
 
+#endregion
 
 
 //new ByteBankAtendimento().AtendimentoCliente();
