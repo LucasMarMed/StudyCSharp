@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bnAvq3bPISOhy2tUUbshin1txlvuMqldpHD9SItVxLHevq2xJlxC2wfafMRtODWkGEkyQl5/BIFEGiOR+HGcgQ==",
+  "dgSpecHash": "bHZ7mnlGcHLiWV6YTga2neaX9yn5s5nD97RUSAFB57A9c8X0wohWdxv3A2OIagIDkGrDamHPe2l2lOfy70S7sQ==",
   "success": true,
-  "projectFilePath": "C:\\Study C#\\StudyCSharp\\8-CleanCode\\8-CleanCode.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\Documents\\GitHub\\StudyCSharp\\StudyCSharp\\8-CleanCode\\8-CleanCode.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

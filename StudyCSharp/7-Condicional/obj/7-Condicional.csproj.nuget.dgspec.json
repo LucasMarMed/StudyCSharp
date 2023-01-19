@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Study C#\\StudyCSharp\\7-Condicional\\7-Condicional.csproj": {}
+    "C:\\Users\\lucas\\Documents\\GitHub\\StudyCSharp\\StudyCSharp\\7-Condicional\\7-Condicional.csproj": {}
   },
   "projects": {
-    "C:\\Study C#\\StudyCSharp\\7-Condicional\\7-Condicional.csproj": {
+    "C:\\Users\\lucas\\Documents\\GitHub\\StudyCSharp\\StudyCSharp\\7-Condicional\\7-Condicional.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Study C#\\StudyCSharp\\7-Condicional\\7-Condicional.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\Documents\\GitHub\\StudyCSharp\\StudyCSharp\\7-Condicional\\7-Condicional.csproj",
         "projectName": "7-Condicional",
-        "projectPath": "C:\\Study C#\\StudyCSharp\\7-Condicional\\7-Condicional.csproj",
+        "projectPath": "C:\\Users\\lucas\\Documents\\GitHub\\StudyCSharp\\StudyCSharp\\7-Condicional\\7-Condicional.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Study C#\\StudyCSharp\\7-Condicional\\obj\\",
+        "outputPath": "C:\\Users\\lucas\\Documents\\GitHub\\StudyCSharp\\StudyCSharp\\7-Condicional\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
