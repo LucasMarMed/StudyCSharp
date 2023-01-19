@@ -36,7 +36,7 @@
             }
             set
             {
-                if (value == null)
+                if (value == 0)
                 {
                     return;
                 }
@@ -119,7 +119,7 @@
             }
             else
             {
-                return this.Numero_agencia.CompareTo(outro.Numero_agencia);
+                return this.Conta.CompareTo(outro.Conta);
             }
         }
 
@@ -127,16 +127,16 @@
         {
             Numero_agencia = numero_agencia;
             Random random = new() ;
-            Conta = random.Next(10000,99999);
+            Conta = random.Next(10000,99999); 
             Titular = new Cliente();
             TotalDeContasCriadas += 1;
 
         }
 
-        //public ContaCorrente(int numero_agencia)
+        //public ContaCorrente(int numero_agencia) 
         //{
         //    Numero_agencia = numero_agencia;
-        //    Conta = Guid.NewGuid().ToString().Substring(0, 8);
+        //    Conta = Guid.NewGuid().ToString().Substring(0, 8); Cria um numero de conta aleatorio, tipo string, com 8 caracteres
         //    Titular = new Cliente();
         //    TotalDeContasCriadas += 1;
         //}
@@ -147,14 +147,14 @@
         public override string ToString()
         {
 
-            return $" === DADOS DA CONTA === \n" +
+            return $"\n === DADOS DA CONTA === \n" +
                    $"Número da Conta : {this.Conta} \n" +
                    $"Número da Agência : {this.Numero_agencia} \n" +
                    $"Saldo da Conta: {this.Saldo} \n" +
                    $"Titular da Conta: {this.Titular.Nome} \n" +
                    $"CPF do Titular  : {this.Titular.Cpf} \n" +
-                   $"Profissão do Titular: {this.Titular.Profissao}\n\n";
-
+                   $"Profissão do Titular: {this.Titular.Profissao}\n\n"+
+                   $"==============================\n";
 
         }
     }
