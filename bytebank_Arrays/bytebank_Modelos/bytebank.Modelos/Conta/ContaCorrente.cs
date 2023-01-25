@@ -157,6 +157,10 @@
                    $"==============================\n";
 
         }
+         private ContaCorrente()
+        {
+
+        } //Criado apenas para serialização do XML
 
     }
 
