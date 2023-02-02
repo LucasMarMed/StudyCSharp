@@ -91,7 +91,37 @@ Em seguida, o comando awk é usado para processar a saída e exibir somente as l
 
 A seguinte linha de comando exibirá o output do cat /etc/passwd com as condições especificadas:
 ```
-Code>~/ cat /etc/passwd | grep -v "^#" | awk 'NR%2==0' | awk -F: '{print $1}' | awk '{print $1}' | rev | sort -r | awk -v line1="$FT_LINE1" -v line2="$FT_LINE2" 'NR >= line1 && NR <= line2 {printf $0", "} END {print ".."}' 
+$
+
+# Storing cat output
+output=`cat /etc/passwd`
+
+# removing comments
+output=`echo "$output" | grep -v '^#'`
+
+# filtering even lines
+output=`echo "$output" | awk 'FNR % 2 == 0'`
+
+# filtering login names
+output=`echo "$output" | cut -d ':' -f1`
+
+# Reversing login names
+output=`echo "$output" | rev`
+
+# Sorting reverse alphabet
+output=`echo "$output" | sort -r`
+
+# Filtering between FT_LINE1 and FT_LINE2
+output=`echo "$output" | awk 'FNR >= ENVIRON["FT_LINE1"] && FNR <= ENVIRON["FT_LINE2"]'`
+
+# Replacing new lines to commas
+output=`echo "$output" | tr '\n' ',' | sed 's/,/, /g'`
+
+# Replacing last comma to dot
+output=`echo "$output" | sed 's/, $/./'`
+
+# print output
+echo -n "$output"
 ```
 Aqui, o comando cat /etc/passwd é usado para exibir o conteúdo do arquivo /etc/passwd. 
 O comando grep -v "^#" é usado para remover as linhas que começam com o caractere "#" (comentários). 
