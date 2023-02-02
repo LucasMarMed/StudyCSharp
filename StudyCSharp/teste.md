@@ -89,8 +89,6 @@ Em seguida, o comando awk é usado para processar a saída e exibir somente as l
   
 #r_dwssap
 
-A seguinte linha de comando exibirá o output do cat /etc/passwd com as condições especificadas:
-```
 $
 
 # Storing cat output
@@ -122,7 +120,9 @@ output=`echo "$output" | sed 's/, $/./'`
 
 # print output
 echo -n "$output"
-```
+
+
+
 Aqui, o comando cat /etc/passwd é usado para exibir o conteúdo do arquivo /etc/passwd. 
 O comando grep -v "^#" é usado para remover as linhas que começam com o caractere "#" (comentários). 
 Em seguida, o comando awk 'NR%2==0' é usado para exibir somente as linhas cujo número de linha (NR) é par. 
