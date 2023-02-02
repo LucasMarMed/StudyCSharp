@@ -3,6 +3,7 @@
 A seguinte linha de comando irá mostrar a lista de grupos aos quais o usuário especificado na variável de ambiente FT_USER pertence, separados por vírgulas sem espaços:
 ```
 $ groups $FT_USER | tr " " "," 
+$ id -Gn "$FT_USER" | tr ' ' ',' #
 ```
 Output
 ```
@@ -16,7 +17,8 @@ Em seguida, o comando tr é usado para substituir os espaços por vírgulas na s
 
 A seguinte linha de comando irá procurar, na pasta atual e em todas as suas subpastas, todos os arquivos cujos nomes terminam com .sh e exibirá somente seus nomes sem o .sh:
 ```
-Code>~/ $ find . -name "*.sh" -print | sed "s/.sh$//" 
+$ find . -name "*.sh" -print | sed "s/.sh$//" 
+$ find . -type f -name "*.sh" -exec basename {} .sh \; #
 ``` 
 Output
 ``` 
@@ -47,7 +49,8 @@ Em seguida, o comando wc é usado para contar o número de linhas na saída, o q
 
 A seguinte linha de comando irá mostrar os endereços MAC da máquina:
 ```
-Code>~/ $ ifconfig | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' 
+$ ifconfig | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}' 
+$ ifconfig | grep ether | tr -d '\t' | cut -d ' ' -f2 #
 ```
 Output
 ``` 
@@ -63,7 +66,8 @@ A opção -E é usada para habilitar a expressão regular estendida.
 
 Para criar um arquivo com o nome especificado e o conteúdo "42", você pode usar o seguinte comando no shell:
 ```
-Code>~/ echo "42" > "\?\$*'MaRViN'\*\$?\""
+$ echo "42" > "\?\$*'MaRViN'\*\$?\""
+$ echo -n 42 > \"\\\?\$\*\'MaRViN\'\*\$\?\\\" #
 ```
 Em seguida, você pode verificar o conteúdo do arquivo com o comando: ```Code>~/ cat "\?\$*'MaRViN'\*\$?\"" ```
 
@@ -76,7 +80,8 @@ Output
 
 A seguinte linha de comando exibirá o resultado do ls -l de duas linhas por vez, a partir da primeira:
 ```
-Code>~/ ls -l | awk 'NR%2==1' 
+# ls -l | awk 'NR % 2 == 1' 
+$ ls -l | awk 'FNR % 2 == 0' #
 ```
 Aqui, o comando ls -l é usado para exibir a listagem detalhada dos arquivos e pastas na pasta atual. 
 
