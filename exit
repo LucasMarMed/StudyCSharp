@@ -1,0 +1,155 @@
+[33mcommit ff16e5e3afda1755105076d7ac7303ea6adf913c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 1be9113 122e89b
+Author: LucasMarMed <81317591+LucasMarMed@users.noreply.github.com>
+Date:   Wed Jan 25 20:50:57 2023 +0000
+
+    Merge pull request #3 from LucasMarMed/Aula-6
+    
+    Aula 6 - Bibliotecas .NET
+
+[33mcommit 122e89becdc539f6702008dc686f0a288727dc11[m[33m ([m[1;31morigin/Aula-6[m[33m, [m[1;32mAula-6[m[33m)[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Wed Jan 25 17:40:22 2023 +0000
+
+    Alteração Validar Senha
+    
+    Criado uma classe AutenticacaoUtil para gerir a autenticação de senha.
+
+[33mcommit 004438584d8dc12a590d723ff38f65907e90fe11[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Tue Jan 24 20:04:23 2023 +0000
+
+    Utilizando bibliotecas externas
+    
+    Foi utilizado biblioteca NewtonsoftJSON, para serialização do arquivo em json, e em seguida foi proposto a possibilidade do arquivo tambem ser exportado em XML, para isso foi utilizado XMLSerialization do proprio .NET
+
+[33mcommit 2bd69b4b33a5f3cbf5d64bcd55be41e64267b62f[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Tue Jan 24 18:13:18 2023 +0000
+
+    Criando Biblioteca de Classe
+    
+    A partir da pasta modelos, foi criado uma biblioteca de classe para caso necessário o reuso desses modelos em projetos semelhantes.
+
+[33mcommit 1be91134327db9f7d39e38fc75489b0144a6f6bf[m
+Merge: 407e67b 58596d9
+Author: LucasMarMed <81317591+LucasMarMed@users.noreply.github.com>
+Date:   Thu Jan 19 01:32:53 2023 +0000
+
+    Merge pull request #2 from LucasMarMed/Aula-5
+    
+    Aula 5
+
+[33mcommit 58596d9e8929835e7c36098bc19c7bad6263e22e[m[33m ([m[1;31morigin/Aula-5[m[33m, [m[1;32mAula-5[m[33m)[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Thu Jan 19 01:31:23 2023 +0000
+
+    Projeto Final
+    
+    Finalizando o projeto, criando a opção de encerrar a aplicação, e re-organizando o código respeitando as boas práticas do Clean Code, para termos maior facilidade para futuras implementações e manutenções.
+
+[33mcommit 407e67b9166e0ff27d58ad6b1ce78fd2a6c943cb[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Thu Jan 19 00:10:32 2023 +0000
+
+    Where or SQL
+    
+    2 alternativas de implementar uma busca em uma coleção
+
+[33mcommit adc6756baf0ba56eeb674b67b528b4ab5234b1f3[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Thu Jan 19 00:02:23 2023 +0000
+
+    ConsultaPorAgencia
+    
+    Adicionando Consulta por agencia e otimizando as outras pesquisas com a função WHERE e ToString
+
+[33mcommit 63ea4c607b3cfc7e8d99687fcb119f0e5e60c34d[m[33m ([m[1;31morigin/Aula-4[m[33m, [m[1;32mAula-4[m[33m)[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Wed Jan 18 22:17:32 2023 +0000
+
+    Aula 4
+    
+    Utilizamos a interface IComparable em Conta Corrente, que deve ser implementada pelo tipo de classe que irá tipificar uma lista genérica para usarmos o método Sort (para reordenar a lista de contas, de acordo com o especificado dentro da classe de contas correntes);
+    Como utilizar o método Remove da classe lista para remoção de um elemento do array de objetos;
+    Como implementar a interface de forma tipada IComparable e o método CompareTo para fazer a ordenação da lista de contas correntes;
+    A criar um algoritmo de busca simples para encontrar um objeto no array de contas correntes.
+
+[33mcommit 462bfb66ae1c3277af611fbbeb075d516324f5de[m[33m ([m[1;31morigin/Aula-3[m[33m, [m[1;32mAula-3[m[33m)[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Wed Jan 18 18:58:10 2023 +0000
+
+    Aula 3
+    
+    Utilizar uma lista genérica de objetos utilizando a classe List<>, que permite a tipagem de uma lista de objetos e que permite a redução da probabilidade de erros de conversão para a manipulação da lista;
+    Sobre métodos disponíveis pela classe List que dinamiza a manipulação de lista de objetos;
+    A criar uma classe para tratar as exceções da aplicação e que se faz necessária uma vez que a aplicação em desenvolvimento tem uma interface de interação com o usuário.
+
+[33mcommit 77ecca28527f6700891a876bdd3511b43da257b4[m
+Merge: f7a9895 9d1f649
+Author: LucasMarMed <81317591+LucasMarMed@users.noreply.github.com>
+Date:   Tue Jan 17 17:06:21 2023 +0000
+
+    Merge pull request #1 from LucasMarMed/Aula-2
+    
+    Aula 2
+
+[33mcommit 9d1f649ac27d2717919641a88a4057cb7fac1d9b[m[33m ([m[1;31morigin/Aula-2[m[33m, [m[1;32mAula-2[m[33m)[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Mon Jan 16 22:53:35 2023 +0000
+
+    ArrayList Colection
+    
+    Foi desenvolvido uma aplicação para o gerente de contas realizar seus atendimentos no seu dia a dia: ele precisa criar e consultas contas para clientes. O construtor de conta corrente foi alterado, para ser gerado um numero de conta automaticamente.
+
+[33mcommit 99d93b0ff2f689a1904024f063af559ae8476c7a[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Mon Jan 16 17:36:49 2023 +0000
+
+    Array de Contas
+    
+    Criando método para testar um Array das contas correntes, propriedades de adicionar, remover, e exibir as contas de um Array. Além de aprendermos a criar e utilizar uma classe com indexador.
+
+[33mcommit f7a9895a25afb34a17a66fa237e089ef6c2625ab[m[33m ([m[1;31morigin/Aula-1[m[33m, [m[1;32mAula-1[m[33m)[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Thu Jan 12 17:37:40 2023 +0000
+
+    Aula 01
+    
+    Entendendo Arrays e como percorre-los
+
+[33mcommit 715d2b4a601194099fae7430f749eb03949a2d63[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Thu Jan 12 15:42:34 2023 +0000
+
+    Projeto Inicial
+    
+    Criando projeto para estudo de arrays e condicionais
+
+[33mcommit 7aa00381d8568f31855bce3f7f14037ee6c368fa[m
+Author: LucasMarMed <81317591+LucasMarMed@users.noreply.github.com>
+Date:   Thu Jan 12 15:41:24 2023 +0000
+
+    Criando pasta
+    
+    s
+
+[33mcommit af584f153a2c28e734fecf4e9f2263ec24838802[m
+Author: LucasMarMed <81317591+LucasMarMed@users.noreply.github.com>
+Date:   Wed Jan 4 17:04:06 2023 +0000
+
+    Create README
+
+[33mcommit f54f0c0e2503fd6919e25849eb6aef602d393468[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Mon Jan 2 16:12:52 2023 +0000
+
+    StartCsharp
+    
+    Explorando a linguagem
+
+[33mcommit f9c798ffe559f042a44bb711912c20ad24d195e9[m
+Author: LucasMarMed <lucas2marques@hotmail.com>
+Date:   Mon Jan 2 16:09:31 2023 +0000
+
+    Initial commit
